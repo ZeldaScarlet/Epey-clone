@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import Devices from "src/assets/devices.json"; 
-import { Phones } from 'src/app/models/category';
 
 
 @Component({
@@ -10,6 +8,5 @@ import { Phones } from 'src/app/models/category';
 })
 export class AppComponent {
   title = 'epey-clone';
-  x: any = Devices;
-  CellPhones: Phones[] = this.x.PhoneModels;
+  
 }

@@ -1,0 +1,77 @@
+<c-header></c-header>
+
+<div class="container">
+    <div class="row justify-content-center align-items-center g-2 row-col-2" style="margin-bottom: 20px;">
+        <div class="col-2">
+            <button type="button" class="btn btn-lg" (click)="login=true">Giriş</button>
+        </div>
+        <div class="col-2">
+            <button type="button" class="btn btn-lg" (click)="login=false">Üye Ol</button>
+        </div>
+    </div>
+    <div class="row g-2">
+        <div class="col-4 offset-md-4">
+            <button type="button" class="btn btn-lg">
+                <i class="bi bi-facebook" style="margin-right: 10px;"></i>
+                <span>Facebook ile Giriş Yap</span>
+            </button>
+        </div>
+        <div class="col-4 offset-md-4">
+            <button type="button" class="btn btn-lg">
+                <i class="bi bi-google" style="margin-right: 10px;"></i>
+                <span>Google ile Giriş Yap</span>
+            </button>
+        </div>
+        <div class="col-4 offset-md-4"><hr class="divider" style="color: #d96142ff;"></div>
+    </div>
+    <div *ngIf="login; else blank">
+        <div class="row g-2">
+            <div class="col-4 offset-md-4">
+                <input class="form form-control form-control-lg" type="text" placeholder="E-Posta" aria-label=".form-control-lg example">
+            </div>
+            <div class="col-4 offset-md-4">
+                <input class=" form form-control form-control-lg" type="text" placeholder="Şifre" aria-label=".form-control-lg example">
+            </div>
+            <div class="col-4 offset-md-4">
+                <button type="button" class="btn btn-lg">Giriş Yap</button>
+            </div>
+        </div>
+        <div class="row justify-content-center g-2 row-col-2" style="margin-bottom: 20px;">
+            <div class="col-2">
+                <div class="form-check">
+                    <input class="form form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Beni Hatırla
+                    </label>
+                  </div>
+            </div>
+            <div class="col-2">
+                <span style="align-self: self-end;">Şifremi unuttum</span>
+            </div>
+        </div>
+    </div>
+    <ng-template #blank>
+        <div class="row g-2">
+            <div class="col-4 offset-md-4">
+                <input class="form form-control form-control-lg" type="text" placeholder="Ad Soyad" aria-label=".form-control-lg example">
+            </div>
+            <div class="col-4 offset-md-4">
+                <input class=" form form-control form-control-lg" type="text" placeholder="E-Posta" aria-label=".form-control-lg example">
+            </div>
+            <div class="col-4 offset-md-4">
+                <input class=" form form-control form-control-lg" type="text" placeholder="Şifre (En az 6 karakter)" aria-label=".form-control-lg example">
+            </div>
+            <div class="col-4 offset-md-4">
+                <input class=" form form-control form-control-lg" type="text" placeholder="Şifre (Tekrar)" aria-label=".form-control-lg example">
+            </div>
+            <div class="col-4 offset-md-4">
+                <img src="assets/check.png">
+            </div>
+            <div class="col-4 offset-md-4">
+                <button type="button" class="btn btn-lg">Üye Ol</button>
+            </div>
+        </div>
+    </ng-template>
+</div>
+
+<c-footer></c-footer>

@@ -1,9 +1,47 @@
 <div class="card">
-    <img src={{c.picture}} class="card-img-left" alt="...">
-    <div style="padding: 10px;">
-        <h4 class="card-title">{{c.brand_name}} {{c.model_name}}</h4>
-    <div class="card-body">
-        <h5 class="text-end mb-3"> {{c.price}} TL </h5>
-    </div>
+    <img src={{picture}} class="card-img-left" alt="...">
+    <div class="innercard">
+        <h6 class="card-title">{{brand_name}} {{model_name}}</h6>
+        <div class="card-body" *ngIf="category == '1'">
+            <div  >
+                <div class="row row-col-2">
+                <div class="col-6 toleft">
+                    <i class="bi bi-circle-fill"></i>
+                    <span>{{screen_size}} </span>
+                </div>
+                <div class="col-6 toleft">
+                    <i class="bi bi-circle-fill"></i>
+                    <span>{{storage}}</span>
+                </div>
+                <div class="col-6 toleft">
+                    <i class="bi bi-circle-fill"></i>
+                    <span>{{ram}}</span>
+                </div>
+                <div class="col-6 toleft">
+                    <i class="bi bi-circle-fill"></i>
+                    <span>{{battery}} mAh</span>
+                </div>
+            </div>
+            </div>
+            <h5 class="text-end mb-3 price"> {{price}} TL </h5>
+        </div>
+        <div class="card-body" *ngIf="category == '3'">
+            <div  >
+                <div class="row row-col-1">
+                <div class="col-12 toleft">
+                    <i class="bi bi-circle-fill"></i>
+                    <span>{{screen_size}}</span>
+                </div>
+                <div class="col-12 toleft">
+                    <i class="bi bi-circle-fill"></i>
+                    <span>{{screen_resolution}}</span>
+                </div>
+            </div>
+            </div>
+            <h5 class="text-end mb-3 price"> {{price}} TL </h5>
+        </div>
+        <div class="card-body" *ngIf="category == '8'">
+            <h5 class="text-end mb-3 price"> {{price}} TL </h5>
+        </div>
     </div>
 </div>

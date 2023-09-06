@@ -3,6 +3,31 @@
     margin: 5px;
   }
   .card img {
-    width: 30%;
+    width: 20%;
     padding: 10px;
+    height: 100%;
+  }
+
+  .innercard{
+    padding: 10px;
+     width: 100%;
+  }
+  .bi{
+    color: #f8f4e0ff;
+    margin-right: 5px;
+  }
+
+  .toleft{
+    position: relative;
+    right: 20px;
+  }
+  .price{
+    position: relative;
+    top: 20px;
+  }
+
+  .card:hover{
+    color:  #d96142ff;
+    border-style: solid;
+    border-color: #d96142ff;
   }

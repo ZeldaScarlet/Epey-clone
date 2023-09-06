@@ -1,0 +1,21 @@
+button{
+    margin: 5px;
+    background-color: #d96142ff;
+    width: 100%;
+    color: white;
+    border-radius: 0;
+}
+
+button:hover{
+    color: #d96142ff;
+    border-style: solid;
+    border-color: #d96142ff;
+    background-color: white;
+    border-radius: 0;
+}
+
+.form{
+    border-color: #d96142ff;
+    box-shadow: none;
+    border-radius: 0;
+}

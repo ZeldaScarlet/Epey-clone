@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-sm navbar-light" style="background-color:#f8f4e0ff;">
     <div class="container-fluid">
       <a class="navbar-brand" style="margin-left: 1%; padding: 0.5%;">
-        <img src="assets\logo.webp" alt="logo">
+        <img src="assets\logo.webp" alt="logo" routerLink="/home" routerLinkActive="active" >
       </a>
       <div class="row justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="margin-right: 3%;">
@@ -14,13 +14,14 @@
                 <h6 class="dropdown-header " style="font-weight: 700;color: black;"> {{s.name}} </h6>
                 <div  *ngIf="s.categories">
                   <li><hr class="dropdown-divider"></li>
-                  <a *ngFor="let s of s.categories" class="dropdown-item" href="#">{{s}}</a>
+                  <a *ngFor="let s of s.categories" class="dropdown-item" href="category/{{s}}">{{s}}</a>
                 </div>
               </div>
             </ul>
           </li>
           <li>
-            <h2 class="bi bi-person-circle" style="margin-left: 15px; margin-top: 5px; color: #d96142ff;"></h2>
+            <h2 routerLink="/login" routerLinkActive="active" class="bi bi-person-circle" style="margin-left: 15px; margin-top: 5px; color: #d96142ff;"></h2>
+            
           </li>
         </ul>
       </div>
@@ -33,9 +34,12 @@
       <div class="col-4">
         <form class="d-flex justify-content-end input-group mb-3" role="search">
           <input class="form-control searchbox" type="search" placeholder="Ne arıyorsunuz?" aria-label="Search">
-          <button class="btn" style="background-color:#d96142ff;width: 70px;" type="submit">
+          <button routerLink="/search" routerLinkActive="active"  class="btn" style="background-color:#d96142ff;width: 70px;" type="submit">
             <i class="bi bi-search" style="color: white;"></i>
           </button>
         </form>
     </div>
   </div>
+
+  
+  <router-outlet></router-outlet>
